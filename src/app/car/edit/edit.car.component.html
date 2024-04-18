@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div
+  class="create-car-card-container"
+  fxLayout="column"
+  fxLayoutAlign="center"
+>
+<mat-card class="create-car-card">
+  <mat-card-header> <mat-card-title>Editar Carro</mat-card-title></mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="carForm" fxLayout="column" fxLayoutAlign="center stretch">
+      <mat-form-field>
+        <mat-label>Placa:</mat-label>
+        <input required matInput formControlName="licensePlate" >
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ano:</mat-label>
+        <input required matInput formControlName="year" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Cor:</mat-label>
+        <input required matInput formControlName="color" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Modelo:</mat-label>
+        <input required matInput formControlName="model" />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="editCar()">
+      Editar
+    </button>
+    <button mat-raised-button color="warn" (click)="cancelar()">
+      Cancelar
+    </button>
+
+  </mat-card-actions>
+
+</mat-card>
+</div>

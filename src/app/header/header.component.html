@@ -1,0 +1,14 @@
+<p>
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Pitang</span>
+    <span class="spacer"></span>
+    <span *ngIf="isLoggedIn()">
+      <button mat-raised-button color="primary" (click)="logout() ">Logout</button>
+      <button mat-raised-button color="accent" (click)="info() ">Infos</button>
+    </span>
+    <button *ngIf="!isLoggedIn()" mat-raised-button color="primary" (click)="login() ">Login</button>
+  </mat-toolbar>
+</p>

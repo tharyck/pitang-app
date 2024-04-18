@@ -1,0 +1,14 @@
+.create-car-card {
+    width: 30%;
+    margin: 0 auto;
+    background-color: #F5f5F5;
+}
+
+.create-car-card-container {
+    min-height: 100vh;
+}
+
+.spacer {
+  padding-left: 8%;
+}
+

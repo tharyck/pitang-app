@@ -1,0 +1,9 @@
+.authentication-card {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #F5f5F5;
+}
+
+.authentication-card-container {
+    min-height: 80%;
+}

@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div
+  class="create-car-card-container"
+  fxLayout="column"
+  fxLayoutAlign="center"
+>
+  <mat-card class="create-car-card">
+    <mat-card-header> <mat-card-title>Editar Usuario</mat-card-title></mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="userForm" fxLayout="column" fxLayoutAlign="center stretch">
+        <mat-form-field>
+          <mat-label>Primeiro Nome:</mat-label>
+          <input required matInput formControlName="firstName"/>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Ultimo Nome:</mat-label>
+          <input required matInput formControlName="lastName" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email:</mat-label>
+          <input required matInput formControlName="email" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Telefone:</mat-label>
+          <input required matInput formControlName="phone" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Data de Nascimento:</mat-label>
+          <input required matInput formControlName="birthday" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Login:</mat-label>
+          <input required matInput formControlName="login" />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="cancelar()">
+        Voltar
+      </button>
+
+    </mat-card-actions>
+
+  </mat-card>
+</div>

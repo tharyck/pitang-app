@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="authentication-card-container" fxLayout="flex" fxLayoutAlign="center">
+  <mat-card class="cars-card" *ngFor="let car of cars">
+    <mat-card-header> <mat-card-title>{{car.licensePlate}}</mat-card-title></mat-card-header>
+    <mat-list >
+      <mat-list-item >
+        <span matListItemTitle>Ano: {{car.year}}</span>
+      </mat-list-item>
+      <mat-list-item >
+        <span matListItemTitle>Cor: {{car.color}}</span>
+      </mat-list-item>
+      <mat-list-item >
+        <span matListItemTitle>Modelo: {{car.model}}</span>
+      </mat-list-item>
+      <mat-list-item >
+        <span class="spacer"></span>
+        <button mat-raised-button color="primary" (click)="getCar(car.id)">Usar</button>
+        <span class="spacer"></span>
+        <button mat-raised-button color="accent" (click)="editeCar(car)">Editar</button>
+        <span class="spacer"></span>
+        <button mat-raised-button color="warn" (click)="deleteCar(car.id)">Excluir</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+  <mat-card class="cars-card" >
+    <mat-card-header> <mat-card-title>Novo Carro</mat-card-title></mat-card-header>
+    <mat-list >
+      <mat-list-item >
+        <span matListItemTitle>Ano: ano do carro</span>
+      </mat-list-item>
+      <mat-list-item >
+        <span matListItemTitle>Cor: cor do carro</span>
+      </mat-list-item>
+      <mat-list-item >
+        <span matListItemTitle>Modelo: modelo do carro</span>
+      </mat-list-item>
+      <mat-list-item >
+        <span class="spacer"></span>
+        <button mat-raised-button color="ok" (click)="createCar()">Adicionar</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>
